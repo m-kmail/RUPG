@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+   <script src="jquery-3.6.0.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <title>API Project</title>
+    </head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+     crossorigin="anonymous">
+    <link rel="stylesheet" tupe="text/css" href="style.css"> 
+  
+    </head>           
+  <body>
+
+    <script class="userScript" type="text/x-handlebars-template">
+       <img src="{{imgURL}}" id="profile-pic">
+       <div class="user-info">
+       <span>{{fName}}</span>
+       <span>{{lName}}</span>
+       <br>
+       <span>{{state}}</span>
+       <span>{{city}}</span>
+       </div>
+    </script>
+
+      <script class="quoteScript" type="text/x-handlebars-template">
+      <p>{{fav}}</p>
+       <h1>{{quote}}</h1>
+       <h3>{{writer}}</h3>
+     </script>
+
+       <script class="pokiScript" type="text/x-handlebars-template">
+       <img src="{{pokemonCage.img}}">
+       <span>{{fav}} {{ pokemonCage.name}}</span>
+       <span></span>
+     </script>
+
+      <script class="aboutScript" type="text/x-handlebars-template">
+      <p>{{intro}}</p>
+      <p>{{aboutMe}}</p>
+     </script>
+
+       <script class="friendScript" type="text/x-handlebars-template">
+        {{#each one}}
+              
+        <span>{{fName}}{{lName}}</span>
+
+        {{/each}}
+     </script>
+
+    <div class="container">	
+        <div class="user-container"></div>	
+        <div class="quote-container"></div>	
+        <div class="content-container">	
+            <div class="pokemon-container"></div>	
+            <div class="meat-container"></div>	
+        </div>	
+        <div class="friends">	
+            <h4>Friends</h4>	
+            <div class="friends-container">	
+            </div>	
+        </div>	
+        <div class="buttons">	
+            <button class="load">Load User Data</button>	
+            <button class="show">Display User</button>	
+        </div>	
+    </div>
+
+
+
+   
+
+   <script src="APIManager.js" deffer></script>      
+   <script src="Renderer.js" deffer></script>    
+   <script src="main.js" deffer></script> 
+  </body>
+</html>
